@@ -38,6 +38,13 @@ public class DaoLogin {
                 login.add("organizacion");
                 nombre = rs.getString("nombre");
                 login.add(nombre.toUpperCase());
+                login.add(rs.getString("rfc"));
+                login.add(rs.getString("correo"));
+                login.add(rs.getString("nombre"));
+                login.add(rs.getString("razonSocial"));
+                login.add(rs.getString("telefono"));
+                login.add(rs.getString("direccion"));
+
 
             }else{
                 cerrarConexiones("loginOrganizacion");
@@ -53,6 +60,15 @@ public class DaoLogin {
                     login.add("voluntario");
                     nombre = rs.getString("nombre");
                     login.add(nombre.toUpperCase());
+                    login.add(rs.getInt("idVoluntario") + "");
+                    login.add(rs.getString("correo"));
+                    login.add(rs.getString("nombre"));
+                    login.add(rs.getString("apellido1"));
+                    login.add(rs.getString("apellido2"));
+                    login.add(rs.getString("telefono"));
+                    login.add(rs.getString("curp"));
+
+
                 }else{
                     login.add("0");
                 }

@@ -93,7 +93,7 @@
         </nav>
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class=" pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2 mt-4 text-center">PERFIL DE ${nombre}</h1>
+                <h1 class="h2 mt-4 text-center">PERFIL DE ${nombreGeneral}</h1>
             </div>
             <!--Contenido-->
 
@@ -111,33 +111,33 @@
                         <div class="row mt-2">
                             <div class="col-xl-4">
                                 <label for="nombre" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control" id="nombre">
+                                <input type="text" value="${nombre}" name="nombre" class="form-control" id="nombre">
                             </div>
                             <div class="col-xl-4">
                                 <label for="razonSocial" class="form-label">Razón Social*:</label>
-                                <input type="text" class="form-control" id="razonSocial">
+                                <input type="text" class="form-control" value="${razonSocial}" name="razonSocial" id="razonSocial">
                             </div>
                             <div class="col-xl-4">
                                 <label for="rfc" class="form-label">RFC*:</label>
-                                <input type="text" class="form-control" id="rfc">
+                                <input type="text" value="${rfc}" name="rfc" class="form-control" id="rfc">
                             </div>
                         </div>
                         <!-- Segunda Fila-->
                         <div class="row mt-2">
                             <div class="col-xl-8">
                                 <label for="direccion" class="form-label">Dirección:</label>
-                                <input type="text" class="form-control" id="direccion">
+                                <input type="text" value="${direccion}" name="direccion" class="form-control" id="direccion">
                             </div>
                             <div class="col-xl-4">
                                 <label for="telefono" class="form-label">Teléfono:</label>
-                                <input type="text" class="form-control" id="telefono">
+                                <input type="text" value="${telefono}" name="telefono" class="form-control" id="telefono">
                             </div>
                         </div>
                         <!-- Tercera linea-->
                         <div class="row mt-2">
                             <div class="col-xl-8">
-                                <label for="email" class="form-label">Email*:</label>
-                                <input type="text" class="form-control" id="email">
+                                <label for="correo" class="form-label">Email*:</label>
+                                <input type="text" value="${correo}" name="correo" class="form-control" id="correo">
                             </div>
 
                         </div>
