@@ -5,10 +5,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Perfil Voluntario</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Postulaciones</title>
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+  <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
 <body>
 <header class="navbar mi-navbar sticky-top  flex-md-nowrap p-0">
@@ -32,7 +32,7 @@
     <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse">
       <div class="position-sticky pt-3">
         <div class="d-flex justify-content-center mt-4">
-          <img class=" mt-4 mb-4 logo" src="img/Logo%20SIGEV.JPG" alt="profile">
+          <img class=" mt-4 mb-4 logo" src="../../img/Logo%20SIGEV.JPG" alt="profile">
         </div>
         <p class="titulo__nav"> Eventos</p>
         <ul class="nav flex-column">
@@ -59,58 +59,57 @@
     </nav>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class=" pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2 mt-4 text-center">PERFIL DE ROLANDO RODRIGUEZ</h1>
+        <h1 class="h2 mt-4 text-center">INFORMACIÓN DEL EVENTO</h1>
       </div>
       <!--Contenido-->
 
       <!-- Logo Imagen-->
       <div class="col-xl-1 m-auto mt-5 mb-4 text-center">
-        <img src="img/foto%20voluntario.jpg" alt="FotoPerfil" class="fotoPerfil rounded-circle">
-        <a href="#" class="text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar Foto</a>
+        <img src="../../img/juguetes.jpg" alt="FotoPerfil" class="fotoPerfil rounded-circle">
       </div>
 
       <!--Formulario-->
       <div class="container__formulario">
         <div class="container__formulario_contenido">
           <!-- Primera fila-->
-          <form action="#" method="post">
+          <form action="testDisponibles.jsp" method="post">
             <div class="row mt-2">
               <div class="col-xl-4">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre">
+                <label for="nombreEvento" class="form-label">Nombre del evento:</label>
+                <input type="text" class="form-control" id="nombreEvento">
               </div>
               <div class="col-xl-4">
-                <label for="razonSocial" class="form-label">Apellido Paterno:</label>
-                <input type="text" class="form-control" id="razonSocial">
+                <label for="date" class="form-label">Fecha:</label>
+                <input type="date" class="form-control" id="date">
               </div>
               <div class="col-xl-4">
-                <label for="rfc" class="form-label">Apellido Materno:</label>
-                <input type="text" class="form-control" id="rfc">
+                <button type="submit" class="btn btn-primary btn-test mb-4 mt-4"> Contestar Test</button>
               </div>
             </div>
             <!-- Segunda Fila-->
             <div class="row mt-2">
               <div class="col-xl-4">
-                <label for="direccion" class="form-label">Email*:</label>
+                <label for="horaInicio" class="form-label">Hora de Inicio:</label>
+                <input type="text" class="form-control" id="horaInicio">
+              </div>
+              <div class="col-xl-8">
+                <label for="direccion" class="form-label">Dirección:</label>
                 <input type="text" class="form-control" id="direccion">
-              </div>
-              <div class="col-xl-4">
-                <label for="telefono" class="form-label">Teléfono:</label>
-                <input type="text" class="form-control" id="telefono">
-              </div>
-              <div class="col-xl-4">
-                <label for="curp" class="form-label">CURP*:</label>
-                <input type="text" class="form-control" id="curp">
               </div>
             </div>
             <!-- Tercera linea-->
+            <div class="row mt-2">
+              <div class="col-xl-12">
+                <label for="descripcion" class="form-label">Descripción:</label>
+                <input type="text" class="form-control" id="descripcion">
+              </div>
 
+            </div>
             <!-- Button -->
             <div class="row justify-content-center mt-2">
               <div class="col-xl-4">
-                <button type="submit" class="btn btn-primary btn-login mb-4 mt-4"> Actualizar Información</button>
+                <button type="submit" class="btn btn-primary btn-login mb-4 mt-4"> Postularme</button>
               </div>
-              <h6 class="text-center aste__marcados">Los Elementos marcados con * no son actualizables</h6>
             </div>
           </form>
         </div>
@@ -121,26 +120,7 @@
     </main>
   </div>
 </div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecciona tu Imagen</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
 
-        <div class="input-group mb-3 mt-3">
-          <input type="file" class="form-control" id="inputGroupFile02">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Guardar Imagen</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

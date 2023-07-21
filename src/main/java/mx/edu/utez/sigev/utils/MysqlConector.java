@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class MysqlConector {
     final String DBNAME = "sigev",
             USER = "root",
-            PASSWORD = "root",
+            PASSWORD = "rootadmin",
             TIMEZONE = "America/Mexico_City",
             USESSL = "false",
             PUBLICKEY = "true",

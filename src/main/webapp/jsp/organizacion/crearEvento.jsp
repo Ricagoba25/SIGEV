@@ -5,10 +5,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Postulaciones</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Crear Evento</title>
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+  <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
 <body>
 <header class="navbar mi-navbar sticky-top  flex-md-nowrap p-0">
@@ -32,20 +32,36 @@
     <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse">
       <div class="position-sticky pt-3">
         <div class="d-flex justify-content-center mt-4">
-          <img class=" mt-4 mb-4 logo" src="img/Logo%20SIGEV.JPG" alt="profile">
+          <img class=" mt-4 mb-4 logo" src="../../img/Logo%20SIGEV.JPG" alt="profile">
         </div>
-        <p class="titulo__nav"> Eventos</p>
+        <p class="titulo__nav"> Solicitudes Voluntarios</p>
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#">
               <i class="fa-solid fa-check"></i>
-              Disponibles
+              Aprobados
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              <i class="fa-regular fa-calendar-plus"></i>
-              Postulados
+              <i class="fa-regular fa-clock"></i>
+              Pendientes
+            </a>
+          </li>
+        </ul>
+        <p class="titulo__nav"> Eventos</p>
+        <ul class="nav flex-column">
+          <li class="nav-item d-none d-sm-block"></li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">
+              <i class="fa-regular fa-calendar-check"></i>
+              Publicados
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-regular fa-pen-to-square"></i>
+              Crear Evento
             </a>
           </li>
           <li class="nav-item">
@@ -55,17 +71,35 @@
             </a>
           </li>
         </ul>
+        <p class="titulo__nav"> Test</p>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">
+              <i class="fa-regular fa-file-lines"></i>
+              Crear Test
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-regular fa-1x fa-rectangle-list"></i>
+              Test Disponibles
+            </a>
+          </li>
+        </ul>
+
+
       </div>
     </nav>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class=" pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2 mt-4 text-center">INFORMACIÓN DEL EVENTO</h1>
+        <h1 class="h2 mt-4 text-center">CREAR EVENTO</h1>
       </div>
       <!--Contenido-->
 
       <!-- Logo Imagen-->
       <div class="col-xl-1 m-auto mt-5 mb-4 text-center">
-        <img src="img/juguetes.jpg" alt="FotoPerfil" class="fotoPerfil rounded-circle">
+        <img src="../../img/icono%20imagen.jpg" alt="FotoPerfil" class="fotoPerfil rounded-circle">
+        <a href="#" class="text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar Imagen</a>
       </div>
 
       <!--Formulario-->
@@ -79,11 +113,11 @@
                 <input type="text" class="form-control" id="nombreEvento">
               </div>
               <div class="col-xl-4">
-                <label for="date" class="form-label">Fecha:</label>
+                <label for="date" class="form-label">Fecha*:</label>
                 <input type="date" class="form-control" id="date">
               </div>
               <div class="col-xl-4">
-                <button type="submit" class="btn btn-primary btn-test mb-4 mt-4"> Contestar Test</button>
+                <button type="submit" class="btn btn-primary btn-test mb-4 mt-4"> Seleccionar Test</button>
               </div>
             </div>
             <!-- Segunda Fila-->
@@ -108,7 +142,7 @@
             <!-- Button -->
             <div class="row justify-content-center mt-2">
               <div class="col-xl-4">
-                <button type="submit" class="btn btn-primary btn-login mb-4 mt-4"> Postularme</button>
+                <button type="submit" class="btn btn-primary btn-login mb-4 mt-4"> Crear Evento</button>
               </div>
             </div>
           </form>
@@ -120,7 +154,26 @@
     </main>
   </div>
 </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Selecciona tu Imagen</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
 
+        <div class="input-group mb-3 mt-3">
+          <input type="file" class="form-control" id="inputGroupFile02">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Guardar Imagen</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

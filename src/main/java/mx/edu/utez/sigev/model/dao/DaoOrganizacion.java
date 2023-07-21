@@ -1,7 +1,6 @@
-package mx.edu.utez.sigev.model;
+package mx.edu.utez.sigev.model.dao;
 
-import com.mysql.cj.MysqlConnection;
-
+import mx.edu.utez.sigev.model.bean.BeanOrganizacion;
 import mx.edu.utez.sigev.utils.MysqlConector;
 
 import java.sql.Connection;
@@ -44,7 +43,7 @@ public class DaoOrganizacion {
                 organizacion.setDireccion(rs.getString("direccion"));
 
 
-                organizacions().add(organizacion);
+                organizacions.add(organizacion);
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -97,8 +96,25 @@ public class DaoOrganizacion {
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }finally {
+            cerrarConexiones("findOne");
         }
         return beanOrganizacion;
+    }
+    public void cerrarConexiones(String method) {
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+            if (ps != null) {
+                ps.close();
+            }
+            if (conn != null) {
+                conn.close();
+            }
+        } catch (SQLException e) {
+            System.out.println("Error al cerrar conexiones en el metodo: " + method + " mensaje: " + e.toString());
+        }
     }
 
 

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="es">
 <head>
@@ -25,7 +26,7 @@
                     <div class="col-10 col-sm-10 col-xl-10">
                         <div class="mb-3 text-start">
                             <label for="correo" class="form-label">Correo:</label>
-                            <input type="email" class="form-control" id="correo" placeholder="tunombre@example.com">
+                            <input type="email" class="form-control" name="correo" id="correo" placeholder="tunombre@example.com">
                         </div>
                     </div>
                     <div class="col-10 col-sm-10 col-xl-10">
@@ -33,17 +34,17 @@
                             <div class="col-12">
                                 <label for="pass" class="form-label">Contraseña:</label>
                             </div>
-                            <input type="password" class="form-control" id="pass" placeholder="**************">
+                            <input type="password" class="form-control" name="contrasenia" id="pass" placeholder="**************">
                         </div>
                         <div class="text-end">
                             <div class="col-12">
                                 <label for="pass" class="form-label menText text-end">Olvidaste tu contraseña?<a
-                                        href="restablecerContra.jsp"> Recuperala</a></label>
+                                        href="jsp/seguridad/restablecerContra.jsp"> Recuperala</a></label>
                             </div>
                         </div>
                         <div class="col-12 col-sm-12 col-xl-12 ">
                             <button class="btn btn-login btn-primary mt-4" type="submit">Iniciar Sesión</button>
-                            <p class="mt-2">¿No tienes cuente? <a href="registro.jsp">Registrate</a></p>
+                            <p class="mt-2">¿No tienes cuente? <a href="jsp/seguridad/registro.jsp">Registrate</a></p>
                         </div>
                     </div>
                 </div>
@@ -56,5 +57,20 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="js/sweetAlert.js"></script>
+<script>
+    console.log("respuestaservidor");
+    console.log(${exitoso});
+    if (${exitoso}){
+        Swal.fire({
+            icon: 'success',
+            title: 'Registro Exitoso',
+        })
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Usuario ó Contraseña Incorrectos',
+        })
+    }
+</script>
 </body>
 </html>

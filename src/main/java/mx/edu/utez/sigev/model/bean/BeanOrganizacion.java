@@ -1,4 +1,4 @@
-package mx.edu.utez.sigev.model;
+package mx.edu.utez.sigev.model.bean;
 
 public class BeanOrganizacion {
 

@@ -4,8 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recuperación de Contraseña</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
 </head>
 <body id="envioCod">
 <div class="container-fluid">
@@ -18,7 +18,7 @@
                 <form action="nuevaContra.jsp" method="get">
                 <div class="row d-flex justify-content-center align-items-center" >
                     <div class="col-xl-12 mb-4">
-                        <img src="img/Logo%20SIGEV.JPG" alt="LOGO" class="logo">
+                        <img src="../../img/Logo%20SIGEV.JPG" alt="LOGO" class="logo">
                     </div>
                     <div class="col-10 col-sm-10 col-xl-10">
                         <div class="mb-3 text-center">
@@ -45,6 +45,6 @@
 </div>
 
 
-<script src="js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 </body>
 </html>

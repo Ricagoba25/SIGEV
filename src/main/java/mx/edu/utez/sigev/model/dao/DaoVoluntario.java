@@ -1,13 +1,9 @@
-package mx.edu.utez.sigev.model;
+package mx.edu.utez.sigev.model.dao;
 
-import com.mysql.cj.MysqlConnection;
-
+import mx.edu.utez.sigev.model.bean.BeanVoluntario;
 import mx.edu.utez.sigev.utils.MysqlConector;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -74,9 +70,8 @@ public class DaoVoluntario {
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
-
         }
-
+        System.out.println("valor restdao" + rest);
         return rest;
     }
 }

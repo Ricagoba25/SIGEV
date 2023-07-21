@@ -5,10 +5,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eventos Disponibles</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/dashboard.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Postulaciones Pendientes</title>
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/dashboard.css">
+  <link rel="stylesheet" href="../../css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
 <body>
 <header class="navbar mi-navbar sticky-top  flex-md-nowrap p-0">
@@ -32,7 +32,7 @@
     <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse">
       <div class="position-sticky pt-3">
         <div class="d-flex justify-content-center mt-4">
-          <img class=" mt-4 mb-4 logo" src="img/Logo%20SIGEV.JPG" alt="profile">
+          <img class=" mt-4 mb-4 logo" src="../../img/Logo%20SIGEV.JPG" alt="profile">
         </div>
         <p class="titulo__nav"> Eventos</p>
         <ul class="nav flex-column">
@@ -59,7 +59,7 @@
     </nav>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class=" pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2 mt-4 text-center">EVENTOS DISPONIBLES</h1>
+        <h1 class="h2 mt-4 text-center">POSTULACIONES PENDIENTES</h1>
       </div>
       <!--Contenido-->
 

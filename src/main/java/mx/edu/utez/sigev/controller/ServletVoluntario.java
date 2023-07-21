@@ -1,8 +1,9 @@
 package mx.edu.utez.sigev.controller;
 
-import mx.edu.utez.sigev.model.BeanVoluntario;
-import mx.edu.utez.sigev.model.DaoVoluntario;
+import mx.edu.utez.sigev.model.bean.BeanVoluntario;
+import mx.edu.utez.sigev.model.dao.DaoVoluntario;
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +26,7 @@ public class ServletVoluntario extends HttpServlet {
                 System.out.println("Datos" + req );
 
                 String correoS = req.getParameter("correo");
-                String nombreS = req.getParameter("nombre");
+                String nombreS = req.getParameter("nombreVoluntario");
                 String apellido1S = req.getParameter("apellido1");
                 String apellido2S = req.getParameter("apellido2");
                 String telefonoS = req.getParameter("telefono");
@@ -43,8 +44,15 @@ public class ServletVoluntario extends HttpServlet {
 
 
                 boolean rest = daoVoluntario.insert(agregarVoluntario);
-                System.out.println("valor de rest " + rest);
 
+                    if(rest){
+                        req.setAttribute("exitoso" , true);
+
+                    }else{
+                        req.setAttribute("exitoso" , false);
+                    }
+                System.out.println("LLEGASTE AL INDEX");
+                req.getRequestDispatcher("index.jsp").forward(req, resp);
                 break;
 
 

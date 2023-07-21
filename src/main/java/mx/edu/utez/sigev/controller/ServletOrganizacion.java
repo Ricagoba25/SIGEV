@@ -1,7 +1,7 @@
 package mx.edu.utez.sigev.controller;
 
-import mx.edu.utez.sigev.model.BeanOrganizacion;
-import mx.edu.utez.sigev.model.DaoOrganizacion;
+import mx.edu.utez.sigev.model.bean.BeanOrganizacion;
+import mx.edu.utez.sigev.model.dao.DaoOrganizacion;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,10 +25,10 @@ public class ServletOrganizacion extends HttpServlet {
                 System.out.println("Datos" + req);
 
                 String rfcS = req.getParameter("rfc");
-                String correoS = req.getParameter("correo");
+                String correoS = req.getParameter("correoOrganizacion");
                 String nombreS = req.getParameter("nombre");
                 String razonSocial2S = req.getParameter("razonSocial");
-                String telefonoS = req.getParameter("telefono");
+                String telefonoS = req.getParameter("telefonoOrganizacion");
                 String contraseniaS = req.getParameter("contrasenia");
                 String direccionS = req.getParameter("direccion");
 
@@ -46,6 +46,14 @@ public class ServletOrganizacion extends HttpServlet {
 
                 boolean rest = daoOrganizacion.insert(agregarOrganizacion);
                 System.out.println("valor de rest " + req);
+                if(rest){
+                    req.setAttribute("exitoso" , true);
+
+                }else{
+                    req.setAttribute("exitoso" , false);
+                }
+                System.out.println("LLEGASTE AL INDEX");
+                req.getRequestDispatcher("index.jsp").forward(req, resp);
 
                 break;
 

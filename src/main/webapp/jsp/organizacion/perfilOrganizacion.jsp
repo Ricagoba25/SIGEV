@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="es">
 
@@ -6,9 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Perfil Organización</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="../../SIGEV_war_exploded/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../SIGEV_war_exploded/css/dashboard.css">
+    <link rel="stylesheet" href="../../SIGEV_war_exploded/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
 <body>
 <header class="navbar mi-navbar sticky-top  flex-md-nowrap p-0">
@@ -20,7 +21,7 @@
     </button>
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-            <p class="px-3">Mi perfil</p>
+            <a href="index.jsp" class="px-3 btn btn-danger">Cerrar Sesión</a>
         </div>
     </div>
 
@@ -32,7 +33,7 @@
         <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block sidebar collapse">
             <div class="position-sticky pt-3">
                 <div class="d-flex justify-content-center mt-4">
-                    <img class=" mt-4 mb-4 logo" src="img/Logo%20SIGEV.JPG" alt="profile">
+                    <img class=" mt-4 mb-4 logo" src="../../SIGEV_war_exploded/img/Logo%20SIGEV.JPG" alt="profile">
                 </div>
                 <p class="titulo__nav"> Solicitudes Voluntarios</p>
                 <ul class="nav flex-column">
@@ -92,13 +93,13 @@
         </nav>
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class=" pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2 mt-4 text-center">PERFIL DE VIDA A.C.</h1>
+                <h1 class="h2 mt-4 text-center">PERFIL DE ${nombre}</h1>
             </div>
             <!--Contenido-->
 
             <!-- Logo Imagen-->
             <div class="col-xl-1 m-auto mt-5 mb-4 text-center">
-                <img src="img/vida%20ac.jpg" alt="FotoPerfil" class="fotoPerfil rounded-circle">
+                <img src="../../SIGEV_war_exploded/img/vida%20ac.jpg" alt="FotoPerfil" class="fotoPerfil rounded-circle">
                 <a href="#" class="text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar Logo</a>
             </div>
             
@@ -106,7 +107,7 @@
             <div class="container__formulario">
                 <div class="container__formulario_contenido">
                     <!-- Primera fila-->
-                    <form action="index.jsp" method="post">
+                    <form action="../../index.jsp" method="post">
                         <div class="row mt-2">
                             <div class="col-xl-4">
                                 <label for="nombre" class="form-label">Nombre:</label>
