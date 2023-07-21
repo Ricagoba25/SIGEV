@@ -7,6 +7,7 @@ public class BeanVoluntario {
     private String apellido1;
     private String apellido2;
     private String telefono;
+    private String curp;
     private String contrasenia;
 
 
@@ -59,6 +60,14 @@ public class BeanVoluntario {
 
     public void setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+
+    public String getCurp() {
+        return curp;
+    }
+
+    public void setCurp(String curp) {
+        this.curp = curp;
     }
 
     public String getContrasenia() {

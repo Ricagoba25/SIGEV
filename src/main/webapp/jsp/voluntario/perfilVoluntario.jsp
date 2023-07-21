@@ -38,13 +38,13 @@
         <p class="titulo__nav"> Eventos</p>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">
+            <a class="nav-link" aria-current="page" href="jsp/voluntario/eventosDispoVoluntario.jsp">
               <i class="fa-solid fa-check"></i>
               Disponibles
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="jsp/voluntario/postulaciones.jsp">
               <i class="fa-regular fa-calendar-plus"></i>
               Postulados
             </a>

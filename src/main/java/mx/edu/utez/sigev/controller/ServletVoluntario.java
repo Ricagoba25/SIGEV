@@ -30,6 +30,7 @@ public class ServletVoluntario extends HttpServlet {
                 String apellido1S = req.getParameter("apellido1");
                 String apellido2S = req.getParameter("apellido2");
                 String telefonoS = req.getParameter("telefono");
+                String curpS = req.getParameter("curp");
                 String contraseniaS = req.getParameter("contrasenia");
 
 
@@ -40,6 +41,7 @@ public class ServletVoluntario extends HttpServlet {
                 agregarVoluntario.setApellido1(apellido1S);
                 agregarVoluntario.setApellido2(apellido2S);
                 agregarVoluntario.setTelefono(telefonoS);
+                agregarVoluntario.setCurp(curpS);
                 agregarVoluntario.setContrasenia(contraseniaS);
 
 

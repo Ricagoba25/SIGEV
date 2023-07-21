@@ -145,7 +145,7 @@
             <div class="row mt-2">
               <div class="col-xl-8">
                 <label for="curp" class="form-label">CURP:</label>
-                <input type="text" class="form-control" id="curp">
+                <input type="text" name="curp" class="form-control" id="curp">
               </div>
             </div>
             <!-- Button -->

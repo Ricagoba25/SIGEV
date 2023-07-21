@@ -37,7 +37,7 @@
         <p class="titulo__nav"> Eventos</p>
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">
+            <a class="nav-link" aria-current="page" href="eventosDispoVoluntario.jsp">
               <i class="fa-solid fa-check"></i>
               Disponibles
             </a>

@@ -15,7 +15,7 @@ public class DaoVoluntario {
 
     private final String GET_VOLUNTARIOS = "select * from voluntario";
     private final String GET_VOLUNTARIO = "select * from voluntario where id = ?";
-    private final String CREATE_VOLUNTARIO = "INSERT INTO Voluntario (correo, nombre, apellido1, apellido2, telefono, contrasenia) VALUES (?, ?, ?, ?, ?, ?)";
+    private final String CREATE_VOLUNTARIO = "INSERT INTO Voluntario (correo, nombre, apellido1, apellido2, telefono, curp, contrasenia) VALUES (?, ?, ?, ?, ?, ?, ?)";
     private final String MODIFICAR_VOLUNTARIO = "UPDATE voluntario set nombre = ?, correo = ?, apellido1 = ?, apellido2 = ?, telefono = ?, contrasenia = ?";
     private final String BORRAR_VOLUNTARIO = "DELETE * FROM voluntario where id = ?";
 
@@ -37,6 +37,7 @@ public class DaoVoluntario {
                 voluntario.setApellido1(rs.getString("apellido1"));
                 voluntario.setApellido2(rs.getString("apellido2"));
                 voluntario.setTelefono(rs.getString("telefono"));
+                voluntario.setCurp(rs.getString("curp"));
                 voluntario.setContrasenia(rs.getString("contrasenia"));
 
 
@@ -61,7 +62,8 @@ public class DaoVoluntario {
             ps.setString(3, agregarvoluntario.getApellido1());
             ps.setString(4, agregarvoluntario.getApellido2());
             ps.setString(5, agregarvoluntario.getTelefono());
-            ps.setString(6, agregarvoluntario.getContrasenia());
+            ps.setString(6, agregarvoluntario.getCurp());
+            ps.setString(7, agregarvoluntario.getContrasenia());
 
             if (ps.executeUpdate() > 0){
                 rest = true;
@@ -70,6 +72,7 @@ public class DaoVoluntario {
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
+
         }
         System.out.println("valor restdao" + rest);
         return rest;
